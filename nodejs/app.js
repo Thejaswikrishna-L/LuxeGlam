@@ -1,11 +1,11 @@
 const express = require('express');
 const app = express();
 
-// Set up middleware and configurations
-// ...
+// Require the route files
+const homeRoutes = require('./routes/homeRoutes');
 
-// Define routes
-app.use('/', require('./routes/index'));
+// Use the route files
+app.use('/', homeRoutes);
 
 // Start the server
 app.listen(3000, () => {
